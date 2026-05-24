@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
-public class Employee {
+@Scope("singleton") // suppose we make Employee "singleton" and User "request".
+public class Employee {//it will give an error. To fix that we need to add additional thing to User
 
     @Autowired
     private User user;

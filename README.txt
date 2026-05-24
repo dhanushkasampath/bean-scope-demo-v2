@@ -9,3 +9,4 @@ Prototype
 Request
 1. One bean per HTTP request
 2. Lazily initialized
+3. Proxy mode - When injecting request scoped beans into singleton scoped bean
