@@ -2,10 +2,11 @@ package com.learn.bean_scope_demo_v2.entity;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-// leave this Employee as singleton
 @Component
+@Scope("prototype")
 public class Employee {
 
     @Autowired
@@ -17,6 +18,7 @@ public class Employee {
 
     @PostConstruct
     public void init(){
-        System.out.println("Employee Object hashcode: " + this.hashCode());
+        System.out.println("Employee Object hashcode: " + this.hashCode() +
+                " | User Object hashcode: " + user.hashCode());
     }
 }

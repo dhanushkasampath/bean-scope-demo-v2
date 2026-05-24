@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype") // this object has initialized even though its prototype.
-public class User { // because Employee is Singleton and it needs User object
+@Scope("request")
+public class User {
     public User() {
         System.out.println("User Object Initialized!");
     }

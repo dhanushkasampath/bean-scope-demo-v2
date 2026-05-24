@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api")
-@Scope("prototype") // since scope is prototype this will not initialize
-public class EmployeeController { // at the application start up
+@Scope("request")
+public class EmployeeController {
 
     @Autowired
     private User user;
